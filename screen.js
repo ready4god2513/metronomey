@@ -3,25 +3,26 @@ $(function(){
   $place = $(".timer");
   $bpm = $(".bpm");
   $bpb = $(".beatsPerBar");
+  $sound = new Audio($place.data("beep"));
 
-  metronome.bpm = 200;
   $bpm.val(metronome.bpm);
   $bpb.val(metronome.interval);
 
   $bpm.on("change", function(){
     metronome.bpm = parseInt($(this).val());
-    metronome.restart(display);
+    metronome.restart(output);
   });
 
   $bpb.on("change", function(){
     metronome.interval = $(this).val();
-    metronome.restart(display);
+    metronome.restart(output);
   });
 
-  metronome.start(display);
+  metronome.start(output);
 
-  function display(beat, max){
+  function output(beat, max){
     $place.html(beat);
+    $sound.play();
   }
 
 });

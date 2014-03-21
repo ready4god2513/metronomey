@@ -11,7 +11,9 @@ var metronome = {
 
     this.timer = setInterval((function(self){
       return function(){
-        beatChanged.apply(self, [self.position, self.totalBeatsPerBar()]);
+        if(typeof beatChanged == "function"){
+          beatChanged.apply(self, [self.position, self.totalBeatsPerBar()]);
+        }
         return self.incrementBeat();
       }
     })(this), this.bpmInMilliseconds());
