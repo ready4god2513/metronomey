@@ -7,7 +7,8 @@
     <title>Metronomy | The Online Metronome with Style</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,7 +19,20 @@
   </head>
   <body>
 
-    <h1 class="timer"></h1>
+    <div class="container">
+      <h1 class="timer text-center"></h1>
+    </div>
+
+    <h1 class="hud text-center">
+      <input type="number" class="bpm" />bpm
+      <select class="beatsPerBar">
+        <option value="2/4">2/4</option>
+        <option value="3/4">3/4</option>
+        <option value="4/4">4/4</option>
+        <option value="6/8">6/8</option>
+        <option value="7/8">7/8</option>
+      </select>
+    </h1>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="metronome.js"></script>

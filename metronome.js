@@ -21,7 +21,13 @@ var metronome = {
     if(this.timer){
       clearInterval(this.timer);
       this.timer = false;
+      this.beatsPerBar = false;
     }
+  },
+
+  restart: function(callback){
+    this.stop();
+    this.start(callback);
   },
 
   resetBeat: function(){

@@ -1,0 +1,34 @@
+body
+{
+  background: #09c;
+}
+
+.timer
+{
+  color: #fff;
+  font-size: 50rem;
+  text-shadow: 2px 2px 2px #222;
+}
+
+.hud
+{
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+  bottom: 0;
+  box-shadow: 0 -1px 3px #222;
+}
+
+.bpm, .beatsPerBar
+{
+  background: none;
+  border: none;
+  width: 80px;
+}
+
+.beatsPerBar
+{
+  width: auto;
+}
